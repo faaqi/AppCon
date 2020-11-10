@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/profile"
+            android:layout_alignParentLeft="true"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#FF000000"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zeeshan Waheed"
+                android:id="@+id/user_name"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/job_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android developer"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="15dp"
+            android:text="20m ago"
+
+            >
+
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/desc"
+            android:text="Cheers to \@afaqAhmed for becoming failure in every thing he tried. Keep trying."
+            android:textSize="13sp"
+            android:textColor="@color/colorAccent"
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/post_img"
+                android:background="@color/colorAccent"
+                android:src="@drawable/fast"
+                >
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/colorGrey"
+                >
+
+            </View>
+
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:id="@+id/like_button"
+                android:layout_marginLeft="10dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/ic_twotone_thumb_up_24"
+                >
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/like_button"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"
+                >
+
+            </TextView>
+
+<!--            <ImageButton-->
+<!--                android:layout_toLeftOf="@+id/num_likes"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:background="@drawable/ic_baseline_thumb_up_24"-->
+<!--                >-->
+
+<!--            </ImageButton>-->
+
+
+            <TextView
+                android:id="@+id/num_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="38 likes"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                >
+
+            </TextView>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/colorGrey"
+                android:layout_below="@+id/like_button"
+                android:layout_marginTop="5dp"
+                >
+
+            </View>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

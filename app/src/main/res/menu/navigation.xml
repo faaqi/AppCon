@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/ic_outline_chat_24"
+        android:title="Chats"/>
+
+    <item
+        android:id="@+id/recognition"
+        android:icon="@drawable/ic_baseline_thumbs_up_down_24"
+        android:title="Recognition"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Profile"/>
+</menu>
