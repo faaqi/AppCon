@@ -20,7 +20,7 @@ public class Channels_Fragment extends Fragment {
 
     ArrayAdapter<String> arrayAdapter;
 
-    String[] msgFrom = {"Zeeshan", "Hamza","Hammad"};
+    String[] msgFrom = {"#General", "#DevOps Team","#Adventure"};
 
     public Channels_Fragment(){
     }
@@ -33,14 +33,14 @@ public class Channels_Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_chat_inbox,container,false);
+        return inflater.inflate(R.layout.fragment_chat_channel,container,false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        listView = view.findViewById(R.id.list_msgz);
+        listView = view.findViewById(R.id.list_channels);
 
         arrayAdapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, msgFrom);
 

@@ -3,12 +3,19 @@ package com.example.appconn_telenor.app_level_fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.appconn_telenor.R;
+import com.example.appconn_telenor.profile_level_fragments.Profile_PagerAdapter;
+import com.example.appconn_telenor.profile_level_fragments.Profile_PostsFragment;
+import com.example.appconn_telenor.recognition_level_fragments.LeaderBoard_fragment;
+import com.example.appconn_telenor.recognition_level_fragments.Recognition_PagerAdapter;
+import com.example.appconn_telenor.recognition_level_fragments.Recognitions_fragment;
+import com.google.android.material.tabs.TabLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +68,25 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view=inflater.inflate(R.layout.fragment_profile, container, false);
+
+        Profile_PagerAdapter profile_pagerAdapter;
+        TabLayout tabLayout;
+        tabLayout = (TabLayout) view.findViewById(R.id.profile_tablayout);
+
+        ViewPager viewpager;
+
+        viewpager= view.findViewById(R.id.profile_Viewpager);
+
+        profile_pagerAdapter = new Profile_PagerAdapter(getChildFragmentManager());
+
+        profile_pagerAdapter.addFragment(new Recognitions_fragment(),"Recognitions");
+        profile_pagerAdapter.addFragment(new Profile_PostsFragment(),"Posts");
+
+        viewpager.setAdapter(profile_pagerAdapter);
+        tabLayout.setupWithViewPager(viewpager);
+
+
+        return view;
     }
 }

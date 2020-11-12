@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4E4C5"
+    android:background="#E9EAE9"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".app_level_fragments.homeFragment">
 
@@ -14,72 +14,17 @@
        android:orientation="vertical"
        android:weightSum="10"
        >
-
        <androidx.cardview.widget.CardView
+           android:id="@+id/feeling_card"
            android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:layout_weight="0.8"
-           android:elevation="15pt"
-           app:cardCornerRadius="@dimen/cardview_compat_inset_shadow"
-           >
-
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:background="#ffffff">
-
-               <Button
-                   android:id="@+id/menu"
-                   android:layout_width="30dp"
-                   android:layout_height="30dp"
-                   android:layout_alignParentLeft="true"
-                   android:layout_centerVertical="true"
-                   android:layout_marginLeft="15dp"
-                   android:background="@drawable/ic_baseline_menu_24"
-                   >
-
-               </Button>
-
-               <ImageView
-                   android:layout_width="150dp"
-                   android:layout_height="40dp"
-                   android:layout_centerInParent="true"
-                   android:background="@drawable/easypaisa"
-                   >
-
-               </ImageView>
-
-
-               <Button
-                   android:id="@+id/notify"
-                   android:layout_width="30dp"
-                   android:layout_height="30dp"
-                   android:layout_alignParentRight="true"
-                   android:layout_centerVertical="true"
-                   android:layout_marginRight="15dp"
-                   android:background="@drawable/ic_baseline_notifications_24"
-                   >
-
-               </Button>
-
-
-
-           </RelativeLayout>
-
-       </androidx.cardview.widget.CardView>
-
-       <androidx.cardview.widget.CardView
-           android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:layout_weight="1.35"
+           android:layout_height="wrap_content"
            android:layout_marginHorizontal="5dp"
-           android:layout_marginTop="5dp"
            app:cardCornerRadius="8pt"
            >
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="match_parent"
+               android:layout_height="wrap_content"
                android:orientation="vertical"
                >
 
@@ -88,7 +33,7 @@
                    android:layout_height="wrap_content"
                    android:text="How are you feeling today?"
                    android:layout_marginHorizontal="20dp"
-                   android:layout_marginVertical="5dp"
+                   android:layout_marginTop="5dp"
                    android:textSize="12sp"
                    android:textStyle="bold"
                    android:textColor="#000000"
@@ -98,7 +43,7 @@
 
                <LinearLayout
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent"
+                   android:layout_height="wrap_content"
                    >
 <!--                   -->
 <!--                   New Implementation of smiley library-->
@@ -112,174 +57,6 @@
 
                    <!--                   New Implementation of smiley library-->
 
-
-                   <!--                   -->
-<!--previous implementation of smileys-->
-<!--                   <LinearLayout-->
-<!--                       android:layout_width="match_parent"-->
-<!--                       android:layout_height="match_parent"-->
-<!--                       android:orientation="horizontal"-->
-<!--                       android:layout_margin="5dp"-->
-<!--                       android:weightSum="5"-->
-<!--                       >-->
-
-<!--                       <LinearLayout-->
-<!--                           android:layout_width="0dp"-->
-<!--                           android:layout_height="match_parent"-->
-<!--                           android:orientation="vertical"-->
-<!--                           android:clickable="true"-->
-<!--                           android:focusable="true"-->
-<!--                           android:focusableInTouchMode="true"-->
-<!--                           android:layout_weight="1">-->
-
-<!--                           <ImageView-->
-<!--                               android:layout_gravity="center"-->
-<!--                               android:layout_width="@dimen/emojiSize"-->
-<!--                               android:layout_height="@dimen/emojiSize"-->
-<!--                               android:background="@drawable/mad"-->
-<!--                               >-->
-
-<!--                           </ImageView>-->
-
-<!--                           <TextView-->
-<!--                               android:textColor="@color/colorAccent"-->
-<!--                               android:layout_marginTop="5dp"-->
-<!--                               android:layout_width="match_parent"-->
-<!--                               android:layout_height="10dp"-->
-<!--                               android:layout_weight="0.2"-->
-<!--                               android:text="Angry"-->
-<!--                               android:textSize="@dimen/emojiTextSize"-->
-<!--                               android:textAlignment="center"-->
-<!--                               >-->
-
-<!--                           </TextView>-->
-
-<!--                       </LinearLayout>-->
-
-<!--                       <LinearLayout-->
-<!--                           android:layout_width="0dp"-->
-<!--                           android:layout_height="match_parent"-->
-<!--                           android:orientation="vertical"-->
-<!--                           android:layout_weight="1">-->
-
-<!--                           <ImageView-->
-<!--                               android:layout_gravity="center"-->
-<!--                               android:layout_width="@dimen/emojiSize"-->
-<!--                               android:layout_height="@dimen/emojiSize"-->
-<!--                               android:background="@drawable/sad"-->
-<!--                               >-->
-
-<!--                           </ImageView>-->
-
-<!--                           <TextView-->
-<!--                               android:layout_marginTop="5dp"-->
-<!--                               android:layout_width="match_parent"-->
-<!--                               android:layout_height="10dp"-->
-<!--                               android:layout_weight="0.2"-->
-<!--                               android:text="Sad"-->
-<!--                               android:textSize="@dimen/emojiTextSize"-->
-<!--                               android:textColor="@color/colorAccent"-->
-<!--                               android:textAlignment="center"-->
-<!--                               >-->
-
-<!--                           </TextView>-->
-
-<!--                       </LinearLayout>-->
-
-<!--                       <LinearLayout-->
-<!--                           android:layout_width="0dp"-->
-<!--                           android:layout_height="match_parent"-->
-<!--                           android:orientation="vertical"-->
-<!--                           android:layout_weight="1">-->
-
-<!--                           <ImageView-->
-<!--                               android:layout_gravity="center"-->
-<!--                               android:layout_width="@dimen/emojiSize"-->
-<!--                               android:layout_height="@dimen/emojiSize"-->
-<!--                               android:background="@drawable/confused"-->
-<!--                               >-->
-
-<!--                           </ImageView>-->
-
-<!--                           <TextView-->
-<!--                               android:layout_marginTop="5dp"-->
-<!--                               android:layout_width="match_parent"-->
-<!--                               android:layout_height="10dp"-->
-<!--                               android:layout_weight="0.2"-->
-<!--                               android:text="Confused"-->
-<!--                               android:textSize="@dimen/emojiTextSize"-->
-<!--                               android:textAlignment="center"-->
-<!--                               android:textColor="@color/colorAccent"-->
-<!--                               >-->
-
-<!--                           </TextView>-->
-
-<!--                       </LinearLayout>-->
-
-<!--                       <LinearLayout-->
-<!--                           android:layout_width="0dp"-->
-<!--                           android:layout_height="match_parent"-->
-<!--                           android:orientation="vertical"-->
-<!--                           android:layout_weight="1">-->
-
-<!--                           <ImageView-->
-<!--                               android:layout_gravity="center"-->
-<!--                               android:layout_width="@dimen/emojiSize"-->
-<!--                               android:layout_height="@dimen/emojiSize"-->
-<!--                               android:background="@drawable/smiling"-->
-<!--                               >-->
-
-<!--                           </ImageView>-->
-
-<!--                           <TextView-->
-<!--                               android:layout_marginTop="5dp"-->
-<!--                               android:layout_width="match_parent"-->
-<!--                               android:layout_height="10dp"-->
-<!--                               android:layout_weight="0.2"-->
-<!--                               android:text="Good"-->
-<!--                               android:textSize="@dimen/emojiTextSize"-->
-<!--                               android:textAlignment="center"-->
-<!--                               android:textColor="@color/colorAccent"-->
-<!--                               >-->
-
-<!--                           </TextView>-->
-
-<!--                       </LinearLayout>-->
-
-<!--                       <LinearLayout-->
-<!--                           android:layout_width="0dp"-->
-<!--                           android:layout_height="match_parent"-->
-<!--                           android:orientation="vertical"-->
-<!--                           android:layout_weight="1">-->
-
-<!--                           <ImageView-->
-<!--                               android:layout_gravity="center"-->
-<!--                               android:layout_width="@dimen/emojiSize"-->
-<!--                               android:layout_height="@dimen/emojiSize"-->
-<!--                               android:background="@drawable/happy"-->
-<!--                               >-->
-
-<!--                           </ImageView>-->
-
-<!--                           <TextView-->
-<!--                               android:layout_marginTop="5dp"-->
-<!--                               android:layout_width="match_parent"-->
-<!--                               android:layout_height="10dp"-->
-<!--                               android:layout_weight="0.2"-->
-<!--                               android:text="Happy"-->
-<!--                               android:textSize="@dimen/emojiTextSize"-->
-<!--                               android:textAlignment="center"-->
-<!--                               android:layout_gravity="center"-->
-<!--                               android:textColor="@color/colorAccent"-->
-<!--                               >-->
-
-<!--                           </TextView>-->
-
-<!--                       </LinearLayout>-->
-
-
-<!--                   </LinearLayout>-->
-
                </LinearLayout>
 
            </LinearLayout>
@@ -291,7 +68,7 @@
        <androidx.cardview.widget.CardView
            android:layout_width="match_parent"
            android:layout_height="0dp"
-           android:layout_weight="1.5"
+           android:layout_weight="2"
            android:layout_marginHorizontal="5dp"
            android:layout_marginTop="5dp"
            app:cardCornerRadius="8pt"
@@ -308,7 +85,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_alignParentLeft="true"
-                   android:layout_marginTop="15dp"
+                   android:layout_marginTop="10dp"
                    android:layout_marginBottom="0dp"
                    app:cardCornerRadius="12dp"
                    android:layout_marginLeft="20dp"
@@ -390,8 +167,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="6"
-
+    android:layout_weight="8"
     android:layout_marginHorizontal="5dp"
     android:layout_marginTop="5dp"
     app:cardCornerRadius="8pt"

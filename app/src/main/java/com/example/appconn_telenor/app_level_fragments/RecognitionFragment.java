@@ -3,12 +3,20 @@ package com.example.appconn_telenor.app_level_fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.appconn_telenor.R;
+import com.example.appconn_telenor.chat_level_fragments.Channels_Fragment;
+import com.example.appconn_telenor.chat_level_fragments.Chats_PagerAdapter;
+import com.example.appconn_telenor.chat_level_fragments.Inbox_Fragment;
+import com.example.appconn_telenor.recognition_level_fragments.LeaderBoard_fragment;
+import com.example.appconn_telenor.recognition_level_fragments.Recognition_PagerAdapter;
+import com.example.appconn_telenor.recognition_level_fragments.Recognitions_fragment;
+import com.google.android.material.tabs.TabLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +69,26 @@ public class RecognitionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recognition, container, false);
+        View view = inflater.inflate(R.layout.fragment_recognition, container, false);
+
+        Recognition_PagerAdapter recognition_pagerAdapter;
+        TabLayout tabLayout;
+        tabLayout = (TabLayout) view.findViewById(R.id.recognition_tablayout);
+
+        ViewPager viewpager;
+
+        viewpager= view.findViewById(R.id.Recognition_Viewpager);
+
+        recognition_pagerAdapter = new Recognition_PagerAdapter(getChildFragmentManager());
+
+        recognition_pagerAdapter.addFragment(new Recognitions_fragment(),"Recognitions");
+        recognition_pagerAdapter.addFragment(new LeaderBoard_fragment(),"Leaderboard");
+
+        viewpager.setAdapter(recognition_pagerAdapter);
+        tabLayout.setupWithViewPager(viewpager);
+
+
+
+        return view;
     }
 }

@@ -101,7 +101,7 @@
                 android:layout_height="180dp"
                 android:id="@+id/post_img"
                 android:background="@color/colorAccent"
-                android:src="@drawable/fast"
+                android:src="@drawable/easypaisa"
                 >
             </ImageView>
         </androidx.cardview.widget.CardView>

@@ -2,18 +2,82 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="2dp">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
 
-    <TextView
-        android:textColor="@color/colorAccent"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/msg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:clickable="true"
-        />
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/msg_from_pic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/profile"
+            android:layout_alignParentLeft="true"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#FF000000"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/msg_from_pic"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zeeshan Waheed"
+                android:id="@+id/msg_from_username"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/msg_from_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android developer"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msg_time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="15dp"
+            android:text="20m ago"
+            android:textSize="12sp"
+            >
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrey"
+        >
+
+    </View>
 
 </LinearLayout>

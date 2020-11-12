@@ -4,10 +4,12 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -111,7 +113,7 @@ public class homeFragment extends Fragment {
 
         String profileImgUrl = getURLForResource(R.drawable.profile);
 
-        String showImgUrl = getURLForResource(R.drawable.fast);
+        String showImgUrl = getURLForResource(R.drawable.easypaisa);
         String postImgUrl = null;
 
         posts.add(new CheersFeed("Zeeshan Waheed",profileImgUrl,"Android Dev","Cheers to @AbidIqbal for good " +
@@ -138,6 +140,9 @@ public class homeFragment extends Fragment {
 
 
         ////////////// smileyr selected listener
+
+        final CardView cardView = view.findViewById(R.id.feeling_card);
+
 
         final SmileyRating smileyRating;
 
@@ -217,6 +222,14 @@ public class homeFragment extends Fragment {
                 score ="Feeling Updated";
                 Toast.makeText(getContext(), score,Toast.LENGTH_LONG).show();
 
+//                cardView.setVisibility(View.GONE)
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        cardView.setVisibility(View.GONE);
+                    }
+                }, 5000);
 
             }
         });
@@ -227,6 +240,8 @@ public class homeFragment extends Fragment {
 
         return view;
     }
+
+
 
     public String getURLForResource (int resourceId) {
         //use BuildConfig.APPLICATION_ID instead of R.class.getPackage().getName() if both are not same

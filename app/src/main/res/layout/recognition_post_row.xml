@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        >
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/recognition_profile_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/profile"
+                    android:layout_alignParentLeft="true"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#FF000000"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/recognition_profile_image"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zeeshan Waheed"
+                        android:id="@+id/rec_user_name"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorAccent"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/rec_job_post"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android developer"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rec_time_ago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="20m ago"
+
+                    >
+
+                </TextView>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="2dp"
+                    android:id="@+id/rec_desc"
+                    android:text="Cheers to \@afaqAhmed for becoming failure in every thing he tried. Keep trying."
+                    android:textSize="13sp"
+                    android:textColor="@color/colorAccent"
+                    >
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    >
+
+
+                    <ImageButton
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/rec_like_button"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/ic_outline_favorite_24"
+                        >
+
+                    </ImageButton>
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@+id/rec_like_button"
+                        android:id="@+id/rec_num_likes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="38"
+                        android:textSize="15sp"
+                        android:layout_marginRight="5dp"
+
+                        >
+                    </TextView>
+
+                    <ImageButton
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/rec_comment_button"
+                        android:layout_toRightOf="@id/rec_num_likes"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/ic_outline_comment_24"
+                        >
+
+                    </ImageButton>
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@+id/rec_comment_button"
+                        android:id="@+id/rec_num_cmnts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="15sp"
+                        android:layout_marginRight="5dp"
+
+                        >
+                    </TextView>
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

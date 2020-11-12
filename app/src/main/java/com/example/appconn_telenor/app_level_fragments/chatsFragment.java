@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.appconn_telenor.chat_level_fragments.*;
-import com.example.appconn_telenor.ChatsViewPagerAdapter;
+
 import com.example.appconn_telenor.R;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -93,9 +93,7 @@ public class chatsFragment extends Fragment {
         chats_pagerAdapter = new Chats_PagerAdapter(getChildFragmentManager());
 
         chats_pagerAdapter.addFragment(new Inbox_Fragment(),"Inbox");
-        chats_pagerAdapter.addFragment(new Channels_Fragment(),"General");
-        chats_pagerAdapter.addFragment(new Channels_Fragment(),"DevOps");
-        chats_pagerAdapter.addFragment(new Channels_Fragment(),"Community");
+        chats_pagerAdapter.addFragment(new Channels_Fragment(),"Channels");
 
         viewpager.setAdapter(chats_pagerAdapter);
         tabLayout.setupWithViewPager(viewpager);
